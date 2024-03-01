@@ -3,7 +3,12 @@ form {
     display: grid;
     gap: 1rem;
 
+    a {
+        text-decoration: underline;
+    }
+
     .content {
+
 
         .input-group {
             display: grid;
@@ -61,6 +66,26 @@ form {
                 &::placeholder {
                     color: $danger;
                 }
+            }
+        }
+    }
+
+    textarea {
+        padding: 1rem;
+        border-radius: 0.5rem !important;
+        border: 0.063rem solid $gray-700;
+        resize: none;
+
+        &::placeholder {
+            opacity: 0.4;
+        }
+
+        &.input-validation-error {
+            border: 1px solid $danger !important;
+            color: $danger;
+
+            &::placeholder {
+                color: $danger;
             }
         }
     }

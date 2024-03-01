@@ -1,44 +1,49 @@
-#login {
+#signin {
+    height: 100%;
 
     .container {
-        display: flex; 
+        display: flex;
         justify-content: center;
         align-items: center;
-        padding: 100px 0;
-        
+        height: 100%;
+
+        @include lg {
+            width: 60%;
+        }
+
+        @include xl {
+            width: 40%;
+        }
+
+
         .content {
-            
-            
-            .headline {
-                padding: 30px 0;
+            display: grid;
+            gap: 1rem 2rem;
+            grid-template-columns: 1fr;
+            grid-template-areas: "email" "password" "remember" "button" "forgot";
+
+
+            #form-email {
+                grid-area: email;
             }
 
-            form {
-                display: grid;
-                grid-template-rows: 1fr;
-                gap: 10px;
-
-                label {
-                    font-weight: 700;
-                }
-
-                input {
-                    border: 1px solid $gray-400;
-                }
-
-                #user_email {
-                    width: 500px;
-                    border-radius: 8px;
-                    height: 40px;
-                }
-
-                #user_password {
-                    border-radius: 8px;
-                    height: 40px;
-                }
-
+            #form-password {
+                grid-area: password;
             }
 
+            #form-remember {
+                grid-area: remember;
+                padding: 1rem 0;
+            }
+
+            #form-submit {
+                grid-area: button;
+            }
+
+            #form-forgot-password {
+                grid-area: forgot;
+                text-align: center;
+            }
         }
     }
 }
