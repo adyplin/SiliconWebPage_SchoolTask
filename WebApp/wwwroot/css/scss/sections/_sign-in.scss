@@ -1,0 +1,44 @@
+#login {
+
+    .container {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0;
+        
+        .content {
+            
+            
+            .headline {
+                padding: 30px 0;
+            }
+
+            form {
+                display: grid;
+                grid-template-rows: 1fr;
+                gap: 10px;
+
+                label {
+                    font-weight: 700;
+                }
+
+                input {
+                    border: 1px solid $gray-400;
+                }
+
+                #user_email {
+                    width: 500px;
+                    border-radius: 8px;
+                    height: 40px;
+                }
+
+                #user_password {
+                    border-radius: 8px;
+                    height: 40px;
+                }
+
+            }
+
+        }
+    }
+}

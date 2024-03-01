@@ -1,0 +1,85 @@
+#light-dark-mode {
+    display: flex;
+    
+    .content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .laptop {
+            position: absolute;
+            z-index: 1;
+            height: 75%;
+            width: 75%;
+
+          @include lg {
+            height: 60%;
+            position: absolute;
+            z-index: 1;
+            margin-top: 220px;
+          }
+        }
+
+        .toggle {
+            position: absolute;
+            z-index: 1;
+            margin-top: 300px;
+            
+            @include lg {
+                margin-top: 450px;
+            }
+        }
+
+        .dark-page {
+            flex: 1;
+            background: $gray-900;
+            width: 50%;
+            padding: 300px 0;
+            position: relative;
+
+            @include lg {
+                padding: 475px 0;
+            }
+
+            h1 {
+                position: absolute;
+                right: 20px;
+                top: 100px;
+
+                @include h5;
+                color: #FFFFFF;
+                @include lg {
+                    @include h1;
+                    color: #FFFFFF;
+                }
+
+            }
+        }
+
+        .light-page {
+            flex: 1;
+            width: 50%;
+            padding: 300px 0;
+            position: relative;
+            
+
+            @include lg {
+                padding: 475px 0;
+            }
+
+            h1 {
+                color: $gray-900;
+                position: absolute;
+                left: 20px;
+                top: 100px;
+
+                @include h5;
+                
+                @include lg {
+                    @include h1;
+                }
+            }
+
+        }
+    }
+}

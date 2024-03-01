@@ -1,0 +1,130 @@
+#our-courses {
+
+    .container {
+
+        .slider {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .headline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .forms {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding-top: 10px;
+            
+                #choose {
+                    border: 1px solid $gray-400;
+                    padding: .4rem 1rem;
+                    border-radius: .5em;
+            
+                }
+
+                input {
+                    border: 1px solid $gray-400;
+
+
+                }
+                i {
+                    position: absolute;
+                    top: 20px;
+                    right: 10px;
+                }
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            border-radius: 10px;
+            gap: 20px;
+
+            @include lg {
+                grid-template-columns: 1fr 1fr 1fr;
+                border-radius: 10px;
+                gap: 40px;
+            }
+            
+
+            .content-box{
+                justify-content: center;
+                border: 1px solid $gray-100;
+                border-radius: 15px;
+                text-align: left; 
+                position: relative;
+
+                .photo {
+                    width: 100%;
+                }
+
+                &:hover {
+                    transition: all 0.15s ease-in-out;
+                    cursor: pointer;
+                    @include shadow-m;
+                }
+                
+
+                .icon-1 {
+                    position: absolute;
+                    top: 15px;
+                    left: 10px;
+                }
+
+                .icon-2 {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                }
+
+                hr {
+                    margin-left: 25px;
+                    width: 90%;
+                }
+
+                h5 {
+                    padding-left: 15px;
+                    padding-top: 10px;
+                }
+                p {
+                    padding-left: 15px;
+                }
+                h6 {
+                    padding-left: 15px;
+                    color: rgb(82, 82, 215);
+                }
+                
+                .price {
+                    display: flex; 
+                    margin-bottom: -8px;
+
+                        h6 {
+                            color: rgb(253, 69, 69);
+                            padding-right: 10px;
+                        }
+
+                        h7 {
+                            text-decoration: line-through;
+                        }
+                    }
+
+
+                .ratings {
+                    display: flex;
+                    gap: 5px;
+                    padding-left: 5px;
+
+                    i {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
