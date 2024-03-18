@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApp.ViewModels;
 
 namespace WebApp.Controllers;
 
 public class AccountController : Controller
 {
+
     [Route("/account")]
     public IActionResult Details()
     {
