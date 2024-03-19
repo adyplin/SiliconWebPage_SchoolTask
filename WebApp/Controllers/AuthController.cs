@@ -47,7 +47,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
             var result = await _userManager.CreateAsync(userEntity, viewModel.Form.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("SignIn", "Account");
+                return RedirectToAction("SignIn", "Auth");
             }
         }
 
@@ -72,6 +72,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     [HttpPost]
     public async Task<IActionResult> SignIn(SignInViewModel viewModel)
     {
+        
         if (ModelState.IsValid)
         {
             var result = await _signInManager.PasswordSignInAsync(viewModel.Form.Email, viewModel.Form.Password, viewModel.Form.RememberMe, false);
