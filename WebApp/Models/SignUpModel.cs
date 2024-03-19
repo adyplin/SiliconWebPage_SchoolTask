@@ -30,7 +30,6 @@ public class SignUpModel
     [DataType(DataType.Password)]
     [Required(ErrorMessage = "Enter a valid password")]
     [RegularExpression("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$", ErrorMessage = "Please enter a valid password.")]
-    
     public string Password { get; set; } = null!;
 
 
