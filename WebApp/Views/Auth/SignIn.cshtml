@@ -7,12 +7,15 @@
 <section id="signin">
     <div class="container">
         <form method="post" asp-asp-controller="Auth" asp-action="SignIn" novalidate>
-            <div>
-                @Model.ErrorMessage
-            </div>
             <h1>Welcome Back</h1>
             <p>Don't have an account yet? <a asp-controller="Auth" asp-action="SignUp">Sign up here</a></p>
 
+            @if (!string.IsNullOrEmpty(ViewData["ErrorMessage"]?.ToString()))
+            {
+                <div class="alert alert-danger" role="alert">
+                    @ViewData["ErrorMessage"]
+                </div>
+            }
             <div class="content">
                 <div id="form-email" class="input-group">
                     <label asp-for=Form.Email></label>
