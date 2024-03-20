@@ -9,6 +9,8 @@ public class UserEntity : IdentityUser
     [ProtectedPersonalData]
     public string LastName { get; set; } = null!;
 
-    public int? AdressId { get; set; }
-    public AddressEntity? Address { get; set; }
+    [ProtectedPersonalData]
+    public string? Bio {  get; set; }
+
+    public ICollection<AddressEntity> Address { get; set; } = [];
 }
