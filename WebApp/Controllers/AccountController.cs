@@ -10,6 +10,8 @@ public class AccountController(SignInManager<UserEntity> signInManager, UserMana
     private readonly SignInManager<UserEntity> _signInManager = signInManager;
     private readonly UserManager<UserEntity> _userManager = userManager;
 
+    #region Account/Details
+
     [HttpGet]
     [Route("/account/details")]
     public async Task <IActionResult> Details()
@@ -26,18 +28,24 @@ public class AccountController(SignInManager<UserEntity> signInManager, UserMana
         return View(viewModel);
 
     }
+    #endregion
 
+    #region BasicInfo
     [HttpPost]
     public IActionResult BasicInfo(AccountDetailsViewModel viewModel)
     {
         //_accountService.SaveBasicInfo(viewModel.BasicInfo);
         return RedirectToAction(nameof(Details));
     }
+    #endregion
 
+    #region AddressInfo
     [HttpPost]
     public IActionResult AddressInfo(AccountDetailsViewModel viewModel)
     {
         //_accountService.SaveAddressInfo(viewModel.AddressInfo);
         return RedirectToAction(nameof(Details));
     }
+
+    #endregion
 }
