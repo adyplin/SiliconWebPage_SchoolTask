@@ -1,5 +1,4 @@
 ﻿using Infrasctructure.Entities;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,13 +12,15 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
     private readonly UserManager<UserEntity> _userManager = userManager;
     private readonly SignInManager<UserEntity> _signInManager = signInManager;
 
+    #region sign up
+
     [Route("/signup")]
     [HttpGet]
     public IActionResult SignUp()
     {
         var viewModel = new SignUpViewModel();
         if (_signInManager.IsSignedIn(User))
-            return RedirectToAction("Details", "Auth");
+            return RedirectToAction("Details", "Account");
         return View(viewModel);
     }
 
@@ -55,7 +56,9 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
 
         return View(viewModel);
     }
-    
+    #endregion
+
+    #region sign in
 
     [Route("/signin")]
     [HttpGet]
@@ -87,6 +90,9 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         return View(viewModel);
 
     }
+    #endregion
+
+    #region sign out
 
     [Route("/signout")]
     [HttpGet]
@@ -96,3 +102,4 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
         return RedirectToAction("Index", "Home");
     }
 }
+#endregion

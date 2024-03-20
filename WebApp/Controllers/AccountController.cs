@@ -1,20 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrasctructure.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using WebApp.ViewModels;
 
 namespace WebApp.Controllers;
 
-public class AccountController : Controller
+public class AccountController(SignInManager<UserEntity> signInManager, UserManager<UserEntity> userManager) : Controller
 {
+    private readonly SignInManager<UserEntity> _signInManager = signInManager;
+    private readonly UserManager<UserEntity> _userManager = userManager;
 
-    [Route("/account")]
-    public IActionResult Details()
+    [HttpGet]
+    [Route("/account/details")]
+    public async Task <IActionResult> Details()
     {
-        var viewModel = new AccountDetailsViewModel();
+        if (!_signInManager.IsSignedIn(User))
+            return RedirectToAction("SignIn", "Auth");
 
-        //viewModel.BasicInfo = _accountService.GetBasicInfo();
-        //viewModel.AddressInfo = _accountService.GetAddressInfo();
+        var userEntity = await _userManager.GetUserAsync(User);
 
+        var viewModel = new AccountDetailsViewModel()
+        {
+            User = userEntity!
+        };
         return View(viewModel);
+
     }
 
     [HttpPost]
