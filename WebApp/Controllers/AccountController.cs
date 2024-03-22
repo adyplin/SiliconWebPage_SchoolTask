@@ -1,14 +1,17 @@
 ﻿using Infrasctructure.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.ViewModels;
 
 namespace WebApp.Controllers;
 
+[Authorize]
 public class AccountController(SignInManager<UserEntity> signInManager, UserManager<UserEntity> userManager) : Controller
 {
     private readonly SignInManager<UserEntity> _signInManager = signInManager;
     private readonly UserManager<UserEntity> _userManager = userManager;
+
 
     #region Account/Details
 
@@ -16,9 +19,6 @@ public class AccountController(SignInManager<UserEntity> signInManager, UserMana
     [Route("/account/details")]
     public async Task <IActionResult> Details()
     {
-        if (!_signInManager.IsSignedIn(User))
-            return RedirectToAction("SignIn", "Auth");
-
         var userEntity = await _userManager.GetUserAsync(User);
 
         var viewModel = new AccountDetailsViewModel()
