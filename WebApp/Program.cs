@@ -1,5 +1,6 @@
 using Infrasctructure.Contexts;
 using Infrasctructure.Entities;
+using Infrasctructure.Services;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Helpers;
 
@@ -25,6 +26,8 @@ builder.Services.ConfigureApplicationCookie(x =>
     x.LoginPath = "/signin";
     x.LogoutPath = "/signout";
 });
+
+builder.Services.AddScoped<AddressManager>();
 
 
 var app = builder.Build();

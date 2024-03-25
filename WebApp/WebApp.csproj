@@ -13,6 +13,8 @@
   <ItemGroup>
     <Folder Include="Models\Components\" />
     <Folder Include="Models\Sections\" />
+    <Folder Include="ViewModels\Account\" />
+    <Folder Include="ViewModels\Authentication\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
