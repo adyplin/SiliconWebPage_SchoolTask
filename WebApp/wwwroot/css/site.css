@@ -977,30 +977,41 @@ footer .container .social-media {
   padding-bottom: 80px;
   position: relative;
 }
-#newsletter .container .text-box i {
-  position: absolute;
-  left: 105px;
-  margin-top: 10px;
-  font-size: 150%;
-}
-@media (min-width: 992px) {
-  #newsletter .container .text-box i {
-    position: absolute;
-    left: 255px;
-    margin-top: 10px;
-    font-size: 150%;
-  }
-}
 #newsletter .container .text-box form {
   display: flex;
   justify-content: center;
+  align-items: center;
+  /**/
 }
 #newsletter .container .text-box form input {
+  flex: 0.6;
   width: 50%;
   border-radius: 10px;
 }
 #newsletter .container .text-box form input::placeholder {
   padding-left: 30px;
+}
+#newsletter .container .text-box form i {
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 150%;
+  left: 110px;
+  top: 22px;
+}
+@media (min-width: 992px) {
+  #newsletter .container .text-box form i {
+    left: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  #newsletter .container .text-box form i {
+    left: 195px;
+  }
+}
+@media (min-width: 1400px) {
+  #newsletter .container .text-box form i {
+    left: 230px;
+  }
 }
 #newsletter .container .text-box form a {
   margin-left: 20px;

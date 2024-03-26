@@ -1,5 +1,6 @@
 #newsletter {
     background-color: $gray-100;
+
     .container {
 
         .headline {
@@ -8,7 +9,7 @@
             padding-top: 100px;
 
             @include lg {
-            margin-right: 100px;
+                margin-right: 100px;
             }
 
             img {
@@ -23,7 +24,7 @@
             padding: 50px 0;
             gap: 15px;
 
-            h5{
+            h5 {
                 width: 200px;
                 margin-right: 40px;
             }
@@ -40,30 +41,18 @@
             }
         }
 
-        .text-box{
+        .text-box {
             padding-bottom: 80px;
             position: relative;
-
-            i {
-                position: absolute;
-                left: 105px;
-                margin-top: 10px;
-                font-size: 150%;
-
-                @include lg {
-                position: absolute;
-                left: 255px;
-                margin-top: 10px;
-                font-size: 150%;
-                }
-            } 
 
 
             form {
                 display: flex;
                 justify-content: center;
+                align-items: center;
 
                 input {
+                    flex: 0.60;
                     width: 50%;
                     border-radius: 10px;
 
@@ -72,21 +61,40 @@
                     }
                 }
 
+/**/                i {
+                        position: absolute;
+                        transform: translateY(-50%);
+                        font-size: 150%; 
+                        left: 110px;
+                        top: 22px;
+
+                        @include lg {
+                            left: 160px;
+                        }
+
+                        @include xl {
+                            left: 195px;
+                        }
+
+                        @include xxl {
+                            left: 230px;
+                        }
+                    }
+
                 a {
                     margin-left: 20px;
-                }  
+                }
             }
 
             p {
                 justify-content: left;
                 padding-top: 20px;
                 padding-left: 250px;
-                
+
                 span {
                     color: rgb(73, 73, 245);
-        
                 }
-            }  
+            }
         }
     }
 }
