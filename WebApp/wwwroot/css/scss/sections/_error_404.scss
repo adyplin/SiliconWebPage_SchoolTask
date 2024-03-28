@@ -1,0 +1,21 @@
+#error-404 {
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        text-align: center;
+
+
+        .btn-theme-s {
+            display: inline-block;
+            width: 50%;
+            margin-top: 2em;
+        }
+
+        .content {
+            margin-bottom: 4em;
+        }
+    }
+}

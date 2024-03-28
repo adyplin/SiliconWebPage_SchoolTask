@@ -154,13 +154,17 @@ public class AccountController(SignInManager<UserEntity> signInManager, UserMana
         if (user != null)
         {
             var address = await _addressManager.GetAddressAsync(user.Id);
-            return new AccountAddressInfoViewModel
-            {
-                Addressline_1 = address.AddressLine_1,
-                Addressline_2 = address.AddressLine_2,
-                PostalCode = address.PostalCode,
-                City = address.City
-            };
+
+            if (address !=null) {
+
+                return new AccountAddressInfoViewModel
+                {
+                    Addressline_1 = address.AddressLine_1,
+                    Addressline_2 = address.AddressLine_2,
+                    PostalCode = address.PostalCode,
+                    City = address.City
+                };
+            }
         }
 
         return new AccountAddressInfoViewModel();
