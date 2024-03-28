@@ -835,8 +835,14 @@ footer .container .social-media {
   }
 }
 #dashboard .container img {
-  width: auto;
-  height: auto;
+  display: none;
+}
+@media (min-width: 768px) {
+  #dashboard .container img {
+    display: block;
+    width: auto;
+    height: auto;
+  }
 }
 @media (min-width: 992px) {
   #dashboard .container img {
@@ -941,6 +947,7 @@ footer .container .social-media {
 #newsletter .container .headline {
   display: flex;
   justify-content: center;
+  text-align: center;
   padding-top: 100px;
 }
 @media (min-width: 992px) {
@@ -953,10 +960,16 @@ footer .container .social-media {
   margin-left: 30px;
 }
 #newsletter .container .content {
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-  gap: 15px;
+  flex: 1;
+  padding: 2rem 6rem;
+}
+@media (min-width: 992px) {
+  #newsletter .container .content {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 15px;
+  }
 }
 #newsletter .container .content h5 {
   width: 200px;
@@ -981,7 +994,6 @@ footer .container .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  /**/
 }
 #newsletter .container .text-box form input {
   flex: 0.6;
@@ -995,8 +1007,13 @@ footer .container .social-media {
   position: absolute;
   transform: translateY(-50%);
   font-size: 150%;
-  left: 110px;
+  left: 100px;
   top: 22px;
+}
+@media (min-width: 768px) {
+  #newsletter .container .text-box form i {
+    left: 110px;
+  }
 }
 @media (min-width: 992px) {
   #newsletter .container .text-box form i {

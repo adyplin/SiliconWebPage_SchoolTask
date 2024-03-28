@@ -1,11 +1,15 @@
 #newsletter {
     background-color: $gray-100;
 
+
     .container {
+
+
 
         .headline {
             display: flex;
             justify-content: center;
+            text-align: center;
             padding-top: 100px;
 
             @include lg {
@@ -19,10 +23,15 @@
         }
 
         .content {
-            display: flex;
-            justify-content: center;
-            padding: 50px 0;
-            gap: 15px;
+            flex: 1;
+            padding: 2rem 6rem;
+
+            @include lg {
+                display: flex;
+                justify-content: center;
+                padding: 50px 0;
+                gap: 15px;
+            }
 
             h5 {
                 width: 200px;
@@ -61,25 +70,31 @@
                     }
                 }
 
-/**/                i {
-                        position: absolute;
-                        transform: translateY(-50%);
-                        font-size: 150%; 
+                i {
+                    position: absolute;
+                    transform: translateY(-50%);
+                    font-size: 150%;
+                    left: 100px;
+                    top: 22px;
+
+                    @include md {
                         left: 110px;
-                        top: 22px;
-
-                        @include lg {
-                            left: 160px;
-                        }
-
-                        @include xl {
-                            left: 195px;
-                        }
-
-                        @include xxl {
-                            left: 230px;
-                        }
                     }
+
+
+
+                    @include lg {
+                        left: 160px;
+                    }
+
+                    @include xl {
+                        left: 195px;
+                    }
+
+                    @include xxl {
+                        left: 230px;
+                    }
+                }
 
                 a {
                     margin-left: 20px;
