@@ -19,19 +19,17 @@
                 align-items: center;
                 gap: 15px;
                 padding-top: 10px;
-            
+
                 #choose {
                     border: 1px solid $gray-400;
                     padding: .4rem 1rem;
                     border-radius: .5em;
-            
                 }
 
                 input {
                     border: 1px solid $gray-400;
-
-
                 }
+
                 i {
                     position: absolute;
                     top: 20px;
@@ -51,14 +49,16 @@
                 border-radius: 10px;
                 gap: 40px;
             }
-            
 
-            .content-box{
+
+            .content-box {
                 justify-content: center;
                 border: 1px solid $gray-100;
                 border-radius: 15px;
-                text-align: left; 
+                text-align: left;
                 position: relative;
+                box-shadow: 0 0 15px gray;
+
 
                 .photo {
                     width: 100%;
@@ -69,18 +69,29 @@
                     cursor: pointer;
                     @include shadow-m;
                 }
-                
 
-                .icon-1 {
+
+                .bestseller {
                     position: absolute;
                     top: 15px;
                     left: 10px;
+                    color: white;
+                    background-color: $success;
+                    border-radius: 5px;
+                    padding: 2px;
                 }
 
-                .icon-2 {
+                button {
                     position: absolute;
                     top: 15px;
                     right: 15px;
+                    background-color: white;
+                    border: 2px solid white;
+                    border-radius: 25px;
+
+                    :hover {
+                        opacity: 0.5;
+                    }
                 }
 
                 hr {
@@ -92,29 +103,28 @@
                     padding-left: 15px;
                     padding-top: 10px;
                 }
+
                 p {
                     padding-left: 15px;
                 }
+
                 h6 {
-                    padding-left: 15px;
-                    color: rgb(82, 82, 215);
-                }
-                
-                .price {
-                    display: flex; 
-                    margin-bottom: -8px;
+                    margin-top: 0;
+                    color: $theme;
+                    margin-left: 15px;
 
-                        h6 {
-                            color: rgb(253, 69, 69);
-                            padding-right: 10px;
-                        }
 
-                        h7 {
-                            text-decoration: line-through;
-                        }
+                    &.sale {
+                        color: $danger;
+                        
                     }
 
-
+                    span {
+                        color: #B4B7C9;
+                        font-weight: 400;
+                    }
+                }
+                   
                 .ratings {
                     display: flex;
                     gap: 5px;
@@ -124,6 +134,7 @@
                         margin: 5px;
                     }
                 }
+                
             }
         }
     }

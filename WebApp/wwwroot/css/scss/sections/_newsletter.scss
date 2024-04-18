@@ -1,9 +1,9 @@
-#newsletter {
+#subscribe {
     background-color: $gray-100;
 
 
     .container {
-
+        width: 60%;
 
 
         .headline {
@@ -11,10 +11,6 @@
             justify-content: center;
             text-align: center;
             padding-top: 100px;
-
-            @include lg {
-                margin-right: 100px;
-            }
 
             img {
                 margin-top: 20px;
@@ -34,77 +30,64 @@
             }
 
             h5 {
-                width: 200px;
+                width: 20%;
                 margin-right: 40px;
             }
 
             .content-box {
                 display: grid;
                 grid-template-rows: 1fr;
-                gap: 20px;
+                gap: 30px;
 
                 @include lg {
                     grid-template-columns: 1fr 1fr 1fr;
                     gap: 20px;
                 }
+                
+
+                .input-group {
+                    display: inline-block;
+                    margin-left: 1rem;
+                }
             }
         }
 
-        .text-box {
+        .form-email {
             padding-bottom: 80px;
-            position: relative;
 
 
-            form {
+            .input-group {
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                position: relative;
+
 
                 input {
-                    flex: 0.60;
-                    width: 50%;
+                    flex: 1;
                     border-radius: 10px;
+                    text-indent: 3rem;
 
-                    &::placeholder {
-                        padding-left: 30px;
-                    }
                 }
 
                 i {
                     position: absolute;
                     transform: translateY(-50%);
                     font-size: 150%;
-                    left: 100px;
-                    top: 22px;
+                    left: 10px;
+                    top: 18px;
 
-                    @include md {
-                        left: 110px;
-                    }
-
-
-
-                    @include lg {
-                        left: 160px;
-                    }
-
-                    @include xl {
-                        left: 195px;
-                    }
-
-                    @include xxl {
-                        left: 230px;
-                    }
+        
                 }
 
-                a {
-                    margin-left: 20px;
+                button {
+                    margin-left: 30px;
+                    border-radius: 10px;
                 }
             }
 
             p {
-                justify-content: left;
+                text-align: left;
                 padding-top: 20px;
-                padding-left: 250px;
 
                 span {
                     color: rgb(73, 73, 245);

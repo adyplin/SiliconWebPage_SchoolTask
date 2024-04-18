@@ -1,45 +1,68 @@
-﻿<section id="newsletter">
+﻿@model SubscribeViewModel
+<section id="subscribe">
     <div class="container">
         <div class="headline">
             <h1>Don't Want to Miss Anything?</h1>
             <img src="images/icons/arrows.svg" alt="">
         </div>
-        <div class="content">
+        <form method="post" asp-action="subscribe" asp-controller ="Home">
+            <div class="content">
             <h5>Sign up for Newsletters</h5>
-            <div class="content-box">
-                <div>
-                    <input type="checkbox">
-                    <label>Daily Newsletter</label>
-                </div>
-                <div>
-                    <input type="checkbox">
-                    <label>Advertising Updates</label>
-                </div>
-                <div>
-                    <input type="checkbox">
-                    <label>Week in Review</label>
-                </div>
-                <div>
-                    <input type="checkbox">
-                    <label>Event Updates</label>
-                </div>
-                <div>
-                    <input type="checkbox">
-                    <label>Startups Weekly</label>
-                </div>
-                <div>
-                    <input type="checkbox">
-                    <label>Podcasts</label>
+                <div class="content-box">
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="DailyNewsletter" />
+                            <label asp-for="DailyNewsletter"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="AdvertisingUpdates" />
+                            <label asp-for="AdvertisingUpdates"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="WeekinReview" />
+                            <label asp-for="WeekinReview"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="EventUpdates" />
+                            <label asp-for="EventUpdates"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="StartupWeekly" />
+                            <label asp-for="StartupWeekly"></label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="Podcasts" />
+                            <label asp-for="Podcasts"></label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="text-box">
-            <form>
-                <i class="fa-regular fa-envelope"></i>
-                <input type="text" name="Email" id="Email" placeholder="Your Email">
-                <a class="btn-theme-s" href="#">Subscribe *</a>
-            </form>
-            <p><span>*</span> Yes, I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
-        </div>
+
+            <div class="form-email">
+                <div class="input-group">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input asp-for="Email" />
+                    <button type="submit" class="btn btn-theme">Subscribe *</button>
+                </div>
+                @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
+                {
+                    <span class="status-message">@TempData["StatusMessage"]</span>
+                }
+                else
+                {
+                    <p class="status-message"><span>*</span> Yes, I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+                }
+            </div>
+        </form>
     </div>
 </section>
