@@ -688,10 +688,10 @@ header .container .btn-mobile {
 #features .container .tool-features .box:hover {
   cursor: pointer;
   background: #FFFFFF;
+  box-shadow: 0 0 10px gray;
 }
 #features .container .tool-features .box img {
   padding: 10px;
-  background-color: #F3F6FF;
   margin: 20px;
 }
 
@@ -756,7 +756,7 @@ footer .container .social-media {
 }
 @media (min-width: 992px) {
   #light-dark-mode .content .dark-page {
-    padding: 475px 0;
+    padding: 360px 0;
   }
 }
 #light-dark-mode .content .dark-page h1 {
@@ -792,7 +792,7 @@ footer .container .social-media {
 }
 @media (min-width: 992px) {
   #light-dark-mode .content .light-page {
-    padding: 475px 0;
+    padding: 360px 0;
   }
 }
 #light-dark-mode .content .light-page h1 {
@@ -937,6 +937,14 @@ footer .container .social-media {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+#work-tools .container .content .content-box {
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+  padding: 1rem;
+}
+#work-tools .container .content .content-box:hover {
+  box-shadow: 0 0 15px gray;
+}
 #work-tools .container .content .content-box img {
   margin-bottom: 20px;
 }
@@ -965,26 +973,26 @@ footer .container .social-media {
   #subscribe .container .content {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
-    gap: 15px;
+    padding: 3rem 0;
+    gap: 1rem;
   }
 }
 #subscribe .container .content h5 {
   width: 20%;
-  margin-right: 40px;
+  margin-right: 2.5rem;
 }
 #subscribe .container .content .content-box {
   display: grid;
   grid-template-rows: 1fr;
-  gap: 30px;
+  gap: 2rem;
 }
 @media (min-width: 992px) {
   #subscribe .container .content .content-box {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 1.2rem;
   }
 }
-#subscribe .container .content .content-box .input-group {
+#subscribe .container .content .content-box .checkbox-group .input-group {
   display: inline-block;
   margin-left: 1rem;
 }
@@ -1020,6 +1028,9 @@ footer .container .social-media {
   color: rgb(73, 73, 245);
 }
 
+#our-courses .container .page-info {
+  padding: 20px 0;
+}
 #our-courses .container .slider {
   display: flex;
   justify-content: center;
@@ -1029,6 +1040,7 @@ footer .container .social-media {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 #our-courses .container .headline .forms {
   position: relative;
@@ -1071,8 +1083,9 @@ footer .container .social-media {
   position: relative;
   box-shadow: 0 0 15px gray;
 }
-#our-courses .container .content .content-box .photo {
+#our-courses .container .content .content-box img {
   width: 100%;
+  border-radius: 15px;
 }
 #our-courses .container .content .content-box:hover {
   transition: all 0.15s ease-in-out;
@@ -1110,17 +1123,29 @@ footer .container .social-media {
 #our-courses .container .content .content-box p {
   padding-left: 15px;
 }
-#our-courses .container .content .content-box h6 {
-  margin-top: 0;
+#our-courses .container .content .content-box .pricing {
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+}
+#our-courses .container .content .content-box .pricing .discount {
+  color: #EF4444;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+#our-courses .container .content .content-box .pricing .price {
   color: #6366F1;
   margin-left: 15px;
+  font-size: 18px;
+  font-weight: 600;
 }
-#our-courses .container .content .content-box h6.sale {
-  color: #EF4444;
-}
-#our-courses .container .content .content-box h6 span {
-  color: #B4B7C9;
-  font-weight: 400;
+#our-courses .container .content .content-box .pricing .discount-enabled {
+  color: #D4D7E5;
+  text-decoration: line-through;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 5px;
 }
 #our-courses .container .content .content-box .ratings {
   display: flex;

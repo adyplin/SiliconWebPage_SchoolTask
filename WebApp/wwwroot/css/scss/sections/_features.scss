@@ -55,11 +55,11 @@
             &:hover {
                 cursor: pointer;
                 background: #FFFFFF;
+                box-shadow: 0 0 10px gray;
             }
 
                 img {
                     padding: 10px;
-                    background-color: $gray-100;
                     margin: 20px;
                 }
             }

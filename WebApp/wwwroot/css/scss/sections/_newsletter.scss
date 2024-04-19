@@ -25,30 +25,35 @@
             @include lg {
                 display: flex;
                 justify-content: center;
-                padding: 50px 0;
-                gap: 15px;
+                padding: 3rem 0;
+                gap: 1rem;
             }
 
             h5 {
                 width: 20%;
-                margin-right: 40px;
+                margin-right: 2.5rem;
             }
 
             .content-box {
                 display: grid;
                 grid-template-rows: 1fr;
-                gap: 30px;
+                gap: 2rem;
 
                 @include lg {
                     grid-template-columns: 1fr 1fr 1fr;
-                    gap: 20px;
+                    gap: 1.2rem;
                 }
                 
+                .checkbox-group {
 
-                .input-group {
-                    display: inline-block;
-                    margin-left: 1rem;
+
+                    .input-group {
+                        display: inline-block;
+                        margin-left: 1rem;
+
+                    }
                 }
+
             }
         }
 

@@ -41,7 +41,11 @@
                             <h5 class="title">@course.Title</h5>
                             <p class="author">@course.Author</p>
                             <div class="pricing">
-                                <h6 class="@(string.IsNullOrEmpty(course.Price) ? "" : "sale")">@course.DiscountPrice <span>@course.Price</span></h6>
+                                @if (!string.IsNullOrEmpty(course.DiscountPrice))
+                                {
+                                    <div class="discount">@course.DiscountPrice</div>
+                                }
+                                <div class="price @(!string.IsNullOrEmpty(course.DiscountPrice)? "discount-enabled" : "")">@course.Price</div>
                             </div>
                             <hr />
                             <div class="ratings">

@@ -22,13 +22,18 @@
             }
 
             .content-box {
+                border-radius: 8px;
+                transition: 0.2s ease-in-out;
+                padding: 1rem;
+
+                &:hover {
+                    box-shadow: 0 0 15px gray;
+                }
 
                 img {
                     margin-bottom: 20px;
                 }
-                
             }
         }
-
     }
 }

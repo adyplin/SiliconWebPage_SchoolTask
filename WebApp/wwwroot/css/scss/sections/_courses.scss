@@ -2,6 +2,10 @@
 
     .container {
 
+        .page-info {
+            padding: 20px 0;
+        }
+
         .slider {
             display: flex;
             justify-content: center;
@@ -12,6 +16,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 40px;
 
             .forms {
                 position: relative;
@@ -60,8 +65,9 @@
                 box-shadow: 0 0 15px gray;
 
 
-                .photo {
+                img {
                     width: 100%;
+                    border-radius: 15px;
                 }
 
                 &:hover {
@@ -108,23 +114,35 @@
                     padding-left: 15px;
                 }
 
-                h6 {
-                    margin-top: 0;
-                    color: $theme;
-                    margin-left: 15px;
+                .pricing {
+                    display: flex;
+                    font-size: 18px;
+                    font-weight: 600;
+                    
 
-
-                    &.sale {
+                    .discount {
                         color: $danger;
-                        
+                        font-size: 18px;
+                        font-weight: 600;
+                        padding-left: 15px;
                     }
 
-                    span {
-                        color: #B4B7C9;
-                        font-weight: 400;
+                    .price {
+                        color: $theme;
+                        margin-left: 15px;
+                        font-size: 18px;
+                        font-weight: 600;
+
                     }
+                        .discount-enabled {
+                            color: $gray-400;
+                            text-decoration: line-through;
+                            font-size: 18px;
+                            font-weight: 600;
+                            margin-left: 5px;
+                        }
                 }
-                   
+
                 .ratings {
                     display: flex;
                     gap: 5px;
@@ -134,7 +152,6 @@
                         margin: 5px;
                     }
                 }
-                
             }
         }
     }
