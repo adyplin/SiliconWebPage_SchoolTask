@@ -59,8 +59,16 @@
 
         .form-email {
             padding-bottom: 80px;
+            position: relative;
+
+                .error{
+                    color: $danger;
+                    position: absolute;
+                    top: 60px;
+                    right: 0px;
 
 
+                }
             .input-group {
                 display: flex;
                 justify-content: center;
@@ -89,6 +97,7 @@
                     border-radius: 10px;
                 }
             }
+
 
             p {
                 text-align: left;

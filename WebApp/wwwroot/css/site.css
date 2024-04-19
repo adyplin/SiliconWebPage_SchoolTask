@@ -998,6 +998,13 @@ footer .container .social-media {
 }
 #subscribe .container .form-email {
   padding-bottom: 80px;
+  position: relative;
+}
+#subscribe .container .form-email .error {
+  color: #EF4444;
+  position: absolute;
+  top: 60px;
+  right: 0px;
 }
 #subscribe .container .form-email .input-group {
   display: flex;
