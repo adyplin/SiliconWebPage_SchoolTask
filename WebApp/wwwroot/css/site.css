@@ -1001,7 +1001,6 @@ footer .container .social-media {
   position: relative;
 }
 #subscribe .container .form-email .error {
-  color: #EF4444;
   position: absolute;
   top: 60px;
   right: 0px;
